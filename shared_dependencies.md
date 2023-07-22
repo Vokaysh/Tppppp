@@ -1,21 +1,19 @@
+1. "main.py": This file will contain the main function that will be used to run the application. It will import functions from "utils.py" and use constants from "constants.py". It will also use the configuration from "config.py".
+
+2. "utils.py": This file will contain utility functions that will be used across the application. These functions will be imported by "main.py" and "tests/test_main.py", "tests/test_utils.py".
+
+3. "constants.py": This file will contain all the constant values that will be used across the application. These constants will be imported by "main.py", "utils.py", "config.py", "tests/test_main.py", "tests/test_utils.py".
+
+4. "config.py": This file will contain the configuration settings for the application. These settings will be used by "main.py".
+
+5. "tests/test_main.py": This file will contain the test cases for "main.py". It will import the main function from "main.py" and utility functions from "utils.py".
+
+6. "tests/test_utils.py": This file will contain the test cases for "utils.py". It will import the utility functions from "utils.py".
+
 Shared Dependencies:
 
-1. FastAPI: This is the main framework used in all the files for creating the API endpoints and handling requests.
-
-2. Firebase Firestore: This is the database used in the application. It is used in the "app/database/firebase.py" file and the router files for storing and retrieving data.
-
-3. User and Chat Models: These are the data schemas used in the application. They are defined in "app/models/user.py" and "app/models/chat.py" and used in the router files for validating request data.
-
-4. User and Chat Routers: These are the route handlers for the application. They are defined in "app/routers/user.py" and "app/routers/chat.py" and used in "main.py" to include the routes in the application.
-
-5. OpenAI API: This is used in "app/chatbot/openai.py" for generating chatbot responses. The API key for this is a shared dependency that should be stored in the ".env" file.
-
-6. Error Handling Functions: These are used in all the router files for handling exceptions. They are defined in "app/utils/error_handling.py".
-
-7. Logging Functions: These are used in all the files for logging runtime information. They are defined in "app/utils/logging.py".
-
-8. Environment Variables: These are used in all the files for configuring the application. They are stored in the ".env" file.
-
-9. User ID and Message Details: These are used in the router files for handling user progress updates, fetching user progress, sending chat messages, fetching chat messages, and generating chatbot responses. The user ID is a path parameter in the user routes, and the message details are part of the request body in the chat routes.
-
-10. HTTP Status Codes: These are used in all the router files for indicating the result of a request. The specific codes used are a shared dependency that could be standardized across the application.
+- Function Names: main, utility functions
+- Constants: All constants from "constants.py"
+- Configuration Settings: All settings from "config.py"
+- Test Cases: Test cases for main and utility functions
+- File Imports: "main.py" imports "utils.py", "constants.py", "config.py"; "tests/test_main.py", "tests/test_utils.py" import "main.py", "utils.py", "constants.py".
